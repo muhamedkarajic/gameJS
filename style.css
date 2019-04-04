@@ -1,0 +1,104 @@
+*
+{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes moveFoward
+{
+    0% { transform: translate(-100%, 0); }
+    100% { transform: translate(100%, 0); }
+}
+
+
+body
+{
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+}
+.rectangle{
+	position: relative;
+    width: 2.5%;
+    float: left;
+    /* border: 1px solid black; */
+    /* border: 1px solid black; */
+    background-color: gainsboro;
+    transition: background-color .2s ease-out;
+    /* background: url("https://i.pinimg.com/236x/ab/59/21/ab5921e212515f5acee549f290930bef--minecraft-bedroom-minecraft-party.jpg") no-repeat center center;
+    background-size: cover; */
+}
+
+.rectangle::before
+{
+	content: "";
+	display: inline-block;
+    padding-top: 100%;
+}
+#player
+{
+    background-color: rgb(99, 189, 177);
+    transition: transform 100ms;
+    z-index: 999;
+    /* background: url("https://static.planetminecraft.com/files/resource_media/screenshot/1527/steveface9092511_lrg.jpg") no-repeat center center;
+    background-size: cover; */
+}
+
+
+#enemy
+{
+    background-color: rgb(133, 99, 189);
+    /* background: url("https://i.etsystatic.com/18249549/d/il/0f5f77/1808583337/il_340x270.1808583337_o653.jpg?version=0") no-repeat center center;
+    background-size: cover; */
+    /* background: url("https://i.pinimg.com/originals/a2/91/26/a29126563a70c51690581f73a62a9d00.png") no-repeat center center;
+    background-size: cover; */
+}
+
+.remove
+{
+
+
+    background-color: rgb(43, 43, 43);
+    /* background-image: url("https://i.pinimg.com/originals/78/3e/4f/783e4f238c694624a695f49cf72dd763.jpg");
+    background: url("https://media.forgecdn.net/avatars/6/148/635352285197909378.png") no-repeat center center;
+    background-size: cover; */
+}
+
+.asteroid
+{
+    background-color: rgb(189, 99, 99);
+    /* border: gainsboro 6px solid; */
+    z-index: 999;
+    /* background: url("http://www.minecraftopia.com/Images/blocks/arrow.png") no-repeat center center;
+    background-size: cover; */
+    /* box-shadow:
+        0 0 60px 2px #fff,
+        0 0 100px 3px #f0f, 
+        0 0 140px 4px rgb(255, 55, 0);
+    z-index: 999; 
+    */
+}
+
+#wrapper
+{
+    height: 100%;
+    width: 100%;
+
+}
+
+
+#gameOver
+{
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.87);
+    border: 2px white solid;
+    visibility: hidden;
+    padding: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate3D(-50%, 50%, 0);
+    z-index: 999;   
+}
